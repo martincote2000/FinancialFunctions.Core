@@ -1,8 +1,7 @@
 using System;
 
-namespace ConsoleApp1
+namespace FinancialFunctions.Core
 {
-
   public static class Duration
   {
     public static double Compute(double faceValue, double couponRate, int maturity)
