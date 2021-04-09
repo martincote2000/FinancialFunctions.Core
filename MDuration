@@ -1,0 +1,15 @@
+using System;
+
+namespace FinancialFunctions.Core
+{
+  public static class MDuration
+  {
+    public static double Compute(double faceValue, double couponRate, int maturity)
+    {
+        var macaulayDuration = Duration.Compute(faceValue, couponRate, maturity);
+        var yieldToMaturity = couponRate;
+
+        return macaulayDuration / (1 + (yieldToMaturity / maturity));
+    }    
+  }
+}
