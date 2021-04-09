@@ -1,0 +1,28 @@
+using System;
+
+namespace ConsoleApp1
+{
+
+  public static class Duration
+  {
+    public static double Compute(double faceValue, double couponRate, int maturity)
+    {
+        double sum = 0;
+
+        for (var time = 1; time <= maturity; time++) 
+        {
+          double cashFlow = faceValue * couponRate;
+
+          if (time == maturity) 
+          {
+                cashFlow += faceValue;
+          }
+
+          var presentValue = cashFlow / Math.Pow(1 + couponRate, time);
+          var weight = presentValue / faceValue;
+          sum += weight * time;
+        }
+        return sum;
+    }    
+  }
+}
