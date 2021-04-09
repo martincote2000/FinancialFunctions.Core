@@ -3,7 +3,7 @@ Financial functions following the Excel Spreadsheet formula **but** without depe
 
 This libraries build for .Net Core.
 
-#Inpirations & documentations
+#Inpirations & documentations  
 [Inspired from this github projet](https://github.com/supasate/Macaulay-Duration-JS)
 
 **Duration documentation**
